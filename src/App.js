@@ -6,10 +6,11 @@
 
 // Import the state hook
 import React, { useState } from "react";
+import Posts from "./components/Posts/Posts";
 // Import the Posts (plural!) and SearchBar components, since they are used inside App component
 // Import the dummyData
 import "./App.css";
-import "./dummy-data";
+import dummyData from "./dummy-data";
 
 const App = (props) => {
   const [posts, setPosts] = useState(dummyData);
@@ -44,11 +45,9 @@ const App = (props) => {
   return (
     <div className="App">
       <div>
-        <Post />
+        <Posts posts={posts} />
       </div>
-      <div>
-        <SeachBar />
-      </div>
+      <div>{/* <SeachBar /> */}</div>
       {/* Add SearchBar and Posts here to render them */}
       {/* Check the implementation of each component, to see what props they require, if any! */}
     </div>
