@@ -45,7 +45,7 @@ const App = (props) => {
   return (
     <div className="App">
       <div>
-        <Posts posts={posts} />
+        <Posts posts={posts} likePost={likePost} />
       </div>
       <div>{/* <SeachBar /> */}</div>
       {/* Add SearchBar and Posts here to render them */}
